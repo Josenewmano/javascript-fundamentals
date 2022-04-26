@@ -16,8 +16,8 @@ const candies = [
 
 const searchCandies = (beginning_of_name, max_price) => {
   const max_or_less = candies.filter(item => item.price <= max_price);
-  const full_list =  max_or_less.filter(item => item.name.toLowerCase().startsWith(beginning_of_name.toLowerCase()));
-  return full_list.map(item => item.name);
+  const matching_list =  max_or_less.filter(item => item.name.toLowerCase().startsWith(beginning_of_name.toLowerCase()));
+  return matching_list.map(item => item.name);
 };
 
 
