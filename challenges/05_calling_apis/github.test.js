@@ -1,5 +1,7 @@
-const Github = require('./github');
+const {Github, GithubApi} = require('./github');
 
 describe(Github, () => {
-  it("")
+  it("responds to get repository data", () => {
+
+  })
 })
