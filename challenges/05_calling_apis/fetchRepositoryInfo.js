@@ -1,3 +1,8 @@
-fetchRepositoryInfo('sinatra/sinatra', (receivedResponse) => {
-  console.log(receivedResponse);
-});
+const got = require("got")
+
+const fetchRepositoryInfo = (url, callback) => {
+  got(url)
+  .then((receivedResponse) => callback(JSON.parse(receivedResponse.body)));
+}
+
+module.exports = fetchRepositoryInfo;
