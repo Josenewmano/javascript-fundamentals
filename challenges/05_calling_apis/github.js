@@ -1,18 +1,17 @@
-const GithubApi = require('./githubApi');
-
 class Github {
 
   constructor(api) {
     this.api = api;
-  }
+  };
 
-  fetch(url) {
-    this.api.getRepositoryData(url, (reponse) => { console.log(response.body)});
-  }
+  fetch(route) {
+    this.api.fetchRepositoryData(route, (response) => { this.data = response });
+  };
 
-}
+  getRepoData() {
+    return this.data;
+  };
 
-module.exports = {
-  Github,
-  GithubApi,
 };
+
+module.exports = Github;

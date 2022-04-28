@@ -1,9 +1,12 @@
 const got = require("got");
 
 class GithubApi {
-  getRepositoryData(url, callback) {
-    got(url).then((response) => callback(JSON.parse(response.body)));
-  }
-}
+  fetchRepositoryData(route, callback) {
+    let github = 'https://api.github.com/repos/';
+    let url = github.concat(route)
+    got(url)
+    .then((receivedResponse) => callback(JSON.parse(receivedResponse.body)));
+  };
+};
 
 module.exports = GithubApi;
