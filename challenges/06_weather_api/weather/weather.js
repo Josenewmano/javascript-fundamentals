@@ -3,8 +3,9 @@ const WeatherView = require('./weatherView');
 
 class Weather {
 
-  constructor(api) {
+  constructor(api, view) {
     this.api = api;
+    this.view = view;
   };
 
   fetch(city) {
@@ -18,10 +19,17 @@ class Weather {
   };
 
   display() {
-    let view = new WeatherView
-    return view.displayWeather(this.data);
+    return this.view.displayWeather(this.data);
   }
 
 }
 
 module.exports = Weather;
+
+const api = new WeatherApi();
+const view = new WeatherView();
+const weather = new Weather(api, view);
+
+weather.fetch('London');
+console.log(weather.data)
+

@@ -3,3 +3,7 @@ challenges/02_search_function/candy_search/node_modules
 challenges/01_testing/fizzbuzz_testing/node_modules
 challenges/01_testing/add_and_multiply_testing/node_modules
 challenges/04_thermostat/thermostat/node_modules
+challenges/05_calling_apis/node_modules
+challenges/06_weather_api/weather/node_modules
+challenges/06_weather_api/weather/apiKey.js
+challenges/07_web_server/simple-server/node_modules

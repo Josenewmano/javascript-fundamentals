@@ -1,5 +1,5 @@
 const got = require('got')
-const apiKey = 'a3d9eb01d4de82b9b8d0849ef604dbed';
+const apiKey = require('./apiKey');
 
 class WeatherApi {
   fetchWeatherData(city, callback) {
